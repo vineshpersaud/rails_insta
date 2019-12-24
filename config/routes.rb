@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'users/create'
   get 'users/signup'
   get 'users/login'
-  get 'users/create'
+  post 'users/create'
   post 'posts/create'
   get 'posts/new'
   get 'posts/show'
