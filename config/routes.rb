@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/create'
+  get 'user/signup'
+  get 'user/login'
+  get 'user/create'
   post 'posts/create'
   get 'posts/new'
   get 'posts/show'
