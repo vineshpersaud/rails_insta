@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   
   def create
+    @user = User.create(user_params)
+    if @user.save
+      redirect_to users_login_path
+    end
   end
   
   def signup
@@ -8,6 +12,14 @@ class UsersController < ApplicationController
   end
 
   def login
+    @user = User.new
+  end
+
+  def show
+  end
+  
+  def create_session
+    binding.pry
   end
 
   private
