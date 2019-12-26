@@ -19,7 +19,11 @@ class UsersController < ApplicationController
   end
   
   def create_session
-    binding.pry
+    if @user = User.find_by_username(params[:user][:username])
+      if @user.authenticate(params[:user][:password])
+        session[:user_id] = @user.id
+      end
+    end
   end
 
   private
