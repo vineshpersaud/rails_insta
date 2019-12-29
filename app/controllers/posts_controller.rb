@@ -5,9 +5,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    user = User.find_by_id(session[:user_id])
+    @post = user.posts.create(post_params)
     if @post.save
-      redirect_to post_path(@post)
+      redirect_to post_feed_path
     end
   end
 

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post 'posts/create'
 
   get 'posts/new'
-  get 'posts/show'
+  get 'posts/show/:id' , to: "posts#show"
   get 'posts/post_feed'
 
   delete '/logout', to: 'sessions#destroy'
