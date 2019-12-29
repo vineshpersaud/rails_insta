@@ -16,7 +16,10 @@ class FriendRequestsController < ApplicationController
       end
     end
 
-    # private
+     private
+        def friends_params
+            params.require(:friend).permit(:id)
+        end
     #     def set_friend_request
     #         @friend_request = FriendRequest.find(params[:id])
     #     end

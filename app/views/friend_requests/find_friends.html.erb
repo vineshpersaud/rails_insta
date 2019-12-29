@@ -3,4 +3,5 @@
 
 <%@friends.each do |friend|%>
     <%=friend.username%><br><br>
+    <%= link_to 'Send Friend Request', friend_requests_path(friend_id: :"#{friend.id}") ,method: :post%><br><br>
 <%end%>
