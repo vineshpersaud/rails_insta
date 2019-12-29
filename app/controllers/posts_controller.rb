@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     user = User.find_by_id(session[:user_id])
     @post = user.posts.create(post_params)
     if @post.save
-      redirect_to post_feed_path
+      redirect_to post_show_path(@post)
     end
   end
 

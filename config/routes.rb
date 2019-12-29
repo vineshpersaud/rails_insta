@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :friend_requests
+  resources :friend_requests, only: [:create]
   get 'users/create'
   get 'users/signup'
   get 'users/login'
@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   post 'posts/create'
 
   get 'posts/new'
-  get 'posts/show/:id' , to: "posts#show"
+  get 'posts/show/:id' , to: "posts#show", as: 'post_show'
   get 'posts/post_feed'
+
+  get 'friend_requests/find_friends', to: 'friend_requests#find_friends'
 
   delete '/logout', to: 'sessions#destroy'
 
