@@ -15,6 +15,11 @@ class PostsController < ApplicationController
     @post = Post.find(params['id'])
   end
 
+  def post_feed
+    if session[:user_id]
+      @user = User.find_by_id(session[:user_id])
+    end
+  end
   private
 
   def post_params
