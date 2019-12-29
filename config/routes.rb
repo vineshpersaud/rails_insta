@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :friend_requests
   get 'users/create'
   get 'users/signup'
   get 'users/login'
