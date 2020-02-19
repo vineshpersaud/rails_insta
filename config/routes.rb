@@ -17,11 +17,12 @@ Rails.application.routes.draw do
   get 'posts/new'
   get 'posts/show/:id' , to: "posts#show", as: 'post_show'
   get 'posts/post_feed'
+  get 'posts/my_post'
 
   get 'friend_requests/find_friends', to: 'friend_requests#find_friends'
 
   delete '/logout', to: 'sessions#destroy'
 
-  
+  root to: 'users#login'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
