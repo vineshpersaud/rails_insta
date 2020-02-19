@@ -1,0 +1,36 @@
+#signup_form{
+    width: 550px;
+    border: 1px;
+    outline: 1px solid black;
+    height: 420px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 195px;
+}
+
+#new_user{
+    width: 25%;
+    margin: 25px;
+    margin-top: 75px;
+    position: absolute;
+}
+
+.new_user input {
+    width: 250px;
+    height: 25px;
+}
+#sign_up {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 0;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  color: #ffffff;
+  background-color: #9555af;
+  height: 40px;
+  font-size: 20px;
+  font-weight: lighter;
+}
