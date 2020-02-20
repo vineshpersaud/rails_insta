@@ -19,7 +19,8 @@ class UsersController < ApplicationController
   end
 
   def find
-    @users = User.all
+    @users = User.all.select{|user| user.id != session[:user_id]}
+   
   end
 
 
