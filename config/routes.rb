@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   post 'posts/create'
 
+  post 'follows/create'
+  
   get 'posts/new'
   get 'posts/show/:id' , to: "posts#show", as: 'post_show'
   get 'posts/post_feed'
