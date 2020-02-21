@@ -19,8 +19,11 @@ class UsersController < ApplicationController
   end
 
   def find
+    current_user = User.find(session[:user_id])
     @users = User.all.select{|user| user.id != session[:user_id]}
-   
+    
+    @users = @users.select { |user| current_user.followings.find_by_id(user.id) == nil}
+    
   end
 
 
