@@ -3,3 +3,9 @@
     <%= user.username%>
     <%= link_to "Follow" , follows_create_path(:user_id => user.id), method: :post%><br><br>
 <%end%>
+
+
+<% @following.each do |user| %>
+    <%= user.username%>
+    <%= link_to "Unfollow" , follows_destroy_path(:user_id => user.id), method: :delete%><br><br>
+<%end%>

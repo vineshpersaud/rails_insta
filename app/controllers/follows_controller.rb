@@ -10,6 +10,14 @@ class FollowsController < ApplicationController
         end
     end
 
+    def destroy
+        current_user = User.find(session[:user_id]) 
+        follow = current_user.given_follows.find_by_followed_user_id(params["user_id"])
+        if follow.destroy
+            redirect_to users_find_path
+        end
+    end
+
 
 end
   
