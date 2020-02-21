@@ -5,7 +5,9 @@ class FollowsController < ApplicationController
         follow = Follow.new
         follow.follower_id = user.id
         follow.followed_user_id = params['user_id']
-        follow.save
+        if follow.save
+            redirect_to users_find_path
+        end
     end
 
 
