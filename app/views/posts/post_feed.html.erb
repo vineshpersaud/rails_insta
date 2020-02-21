@@ -1,9 +1,12 @@
 <p>This User Your feed , <%=@user.username%>.</p>
 <%= link_to "Log Out", logout_path , method: :delete%>
 
-
 <div id= "images">
     <% @posts.each do |post| %>
-        <div class="post_image"><%= image_tag post.image%></div>
+        <div class="post_feed_item">
+            <%= post.user.username %>
+            <div class="post_feed_image"><%= image_tag post.image%></div>
+            <%= post.title %><br>
+        </div>
     <%end%>
 </div>
