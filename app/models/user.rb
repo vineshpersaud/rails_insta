@@ -20,7 +20,7 @@ class User < ApplicationRecord
         if pic != nil
             return pic.image
         else
-            return nil
+            return "cat-profile-64.png"
         end
     end
 end
