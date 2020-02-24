@@ -1,11 +1,25 @@
 <h2>Finds Users to follow</h2>
 <% @users.each do |user| %>
+    <div class= "profile_pic">
+        <% if user.profile_pic != nil %>
+            <%= image_tag user.profile_pic %>
+        <%else%>
+            <%= image_tag('cat-profile-64.png') %>
+        <%end%>
+    </div>
     <%= user.username%>
     <%= link_to "Follow" , follows_create_path(:user_id => user.id), method: :post%><br><br>
 <%end%>
 
 
 <% @following.each do |user| %>
+    <div class= "profile_pic">
+        <% if user.profile_pic != nil %>
+            <%= image_tag user.profile_pic %>
+        <%else%>
+            <%= image_tag('cat-profile-64.png') %>
+        <%end%>
+    </div>
     <%= user.username%>
     <%= link_to "Unfollow" , follows_destroy_path(:user_id => user.id), method: :delete%><br><br>
 <%end%>

@@ -16,3 +16,9 @@
 *{
     background-color #fafafa;
 }
+
+.profile_pic img {
+    width: 64px;
+    height: 64px;
+    border-radius: 90%;
+}

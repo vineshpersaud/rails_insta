@@ -16,6 +16,11 @@ class User < ApplicationRecord
 
     def profile_pic
         pic = self.posts.select{|post|post.profile_picture == true}
-        return pic[0]
+        pic = pic[0]
+        if pic != nil
+            return pic.image
+        else
+            return nil
+        end
     end
 end
