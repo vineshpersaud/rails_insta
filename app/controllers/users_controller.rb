@@ -12,6 +12,9 @@ class UsersController < ApplicationController
   end
 
   def login
+    if logged_in?
+      redirect_to posts_post_feed_path
+    end
     @user = User.new
   end
 
