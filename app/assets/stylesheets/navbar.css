@@ -1,0 +1,16 @@
+#navbar ul{  
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: flex-end;
+}
+
+#navbar li{
+    margin-right: 50px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#navbar img{
+    width: 32px;
+    height: auto;
+}
