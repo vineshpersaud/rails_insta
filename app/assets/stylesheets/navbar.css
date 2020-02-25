@@ -14,3 +14,8 @@
     width: 32px;
     height: auto;
 }
+
+#navbar{
+    border-bottom: .5px solid;
+    margin-bottom: 30px;
+}

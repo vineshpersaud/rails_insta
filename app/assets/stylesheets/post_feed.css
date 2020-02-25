@@ -8,8 +8,9 @@
     border-radius: 5px;
 }
 
-.post_feed_item img{
+.post_feed_image {
     width: 100%;
+    height: auto;
     margin-top: 30px;
 }
 
@@ -21,4 +22,21 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
+    display: inline-block;
+    float: left;
+}
+.profile_pic {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.user_box{
+    border-style: solid;
+    border-width: thin;
+    margin-bottom: 20px;
+    width: 650px;
+    height: 100px;
 }
