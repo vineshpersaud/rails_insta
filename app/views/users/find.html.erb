@@ -4,7 +4,9 @@
         <div class= "profile_pic">
             <%= image_tag(user.profile_pic) %>
         </div>
-        <%= user.username%>
+        <div class="username">
+            <%= user.username%>
+        </div>
         <%= link_to "Follow" , follows_create_path(:user_id => user.id), method: :post%><br><br>
     </div>
 <%end%>
@@ -15,7 +17,9 @@
         <div class= "profile_pic">
             <%= image_tag(user.profile_pic) %>
         </div>
-        <%= user.username%>
+        <div class="username">
+            <%= user.username%>
+        </div>
         <%= link_to "Unfollow" , follows_destroy_path(:user_id => user.id), method: :delete%><br><br>
     </div>
 <%end%>

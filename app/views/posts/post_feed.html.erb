@@ -4,8 +4,12 @@
 <div id= "images">
     <% @posts.each do |post| %>
         <div class="post_feed_item">
-            <%= image_tag(post.user.profile_pic, class: "profile_pic") %>
-            <%= post.user.username %>
+            <div class="post_feed_header">
+                <%= image_tag(post.user.profile_pic, class: "profile_pic") %>
+                <div class="username">
+                    <%= post.user.username%>
+                </div>
+            </div>
             <div class="post_feed_image"><%= image_tag(post.image,  class: "post_feed_image")%></div>
             <%= post.title %><br>
         </div>

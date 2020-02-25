@@ -24,6 +24,7 @@
     border-radius: 50%;
     display: inline-block;
     float: left;
+    
 }
 .profile_pic {
     width: 54px;
@@ -31,6 +32,8 @@
     border-radius: 50%;
     display: inline-block;
     float: left;
+    margin-right: 7px;
+    
 }
 
 .user_box{
@@ -39,4 +42,16 @@
     margin-bottom: 20px;
     width: 650px;
     height: 100px;
+}
+
+.post_feed_header{
+    margin: 10px;
+}
+
+.username{
+    font-weight: 550;
+    color: #262625;
+    margin-left: 10px;
+    margin-top: 13px;
+    float: left;
 }
