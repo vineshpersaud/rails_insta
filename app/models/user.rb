@@ -1,12 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
     has_many :posts
-
-    has_many :friend_requests, dependent: :destroy
-    has_many :pending_friends, through: :friend_requests, source: :friend
-
-    has_many :friendships, dependent: :destroy
-    has_many :friends, through: :friendships
+    has_many :comments
 
 
     has_many :received_follows, foreign_key: :followed_user_id, class_name: "Follow"
