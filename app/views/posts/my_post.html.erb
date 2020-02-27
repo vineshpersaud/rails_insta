@@ -1,7 +1,7 @@
 
 
 <h1>My Posts Feed</h1>
-<div id= "images">
+<div id= "user_images">
     <% @user.posts.each do |post| %>
         <div class="post_image"><%= image_tag post.image%></div>
     <%end%>
