@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get 'posts/post_feed'
   get 'posts/my_post'
 
+  post 'comments/create'
+
   get 'friend_requests/find_friends', to: 'friend_requests#find_friends'
 
   delete '/logout', to: 'sessions#destroy'

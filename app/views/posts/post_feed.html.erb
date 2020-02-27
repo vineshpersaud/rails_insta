@@ -12,6 +12,14 @@
             </div>
             <div class="post_feed_image"><%= image_tag(post.image,  class: "post_feed_image")%></div>
             <%= post.title %><br>
+
+
+            <%= form_for @comment , url: comments_create_path do |f|%>
+                <%= f.label :text %>
+                <%= f.text_area :text %>
+                <%= hidden_field_tag "comment[post_id]", "#{post.id}" %>
+                <%= f.submit %>
+            <%end%>
         </div>
     <%end%>
 </div>
