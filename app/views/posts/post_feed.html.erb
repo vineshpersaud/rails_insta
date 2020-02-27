@@ -12,7 +12,8 @@
             </div>
             <div class="post_feed_image"><%= image_tag(post.image,  class: "post_feed_image")%></div>
             <%= post.title %><br>
-
+            <%= button_to 'Like', likes_create_path(post_id: post), method: :post %>
+            <%= post.likes.length %>
 
             <% post.comments.each do |comment|%>
                 <%=comment.text%>

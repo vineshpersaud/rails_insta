@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   post 'posts/create'
 
+  post 'likes/create'
+
   post 'follows/create'
   delete 'follows/destroy'
   

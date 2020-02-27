@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   end
 
   def post_feed
+    @like = Like.new
     @comment = Comment.new
     if session[:user_id]
       @user = User.find_by_id(session[:user_id])
