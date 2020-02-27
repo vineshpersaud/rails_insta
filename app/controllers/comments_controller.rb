@@ -2,7 +2,9 @@ class CommentsController < ApplicationController
 
 
     def create
-        binding.pry
+        if current_user.comments.create(comment_params)
+            redirect_to posts_post_feed_path
+        end
     end
 
     private

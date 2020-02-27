@@ -14,6 +14,10 @@
             <%= post.title %><br>
 
 
+            <% post.comments.each do |comment|%>
+                <%=comment.text%>
+            <%end%>
+
             <%= form_for @comment , url: comments_create_path do |f|%>
                 <%= f.label :text %>
                 <%= f.text_area :text %>
