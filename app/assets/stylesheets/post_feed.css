@@ -13,6 +13,7 @@
     border-width: 1px;
     border-color: lightgray;
     border-radius: 5px;
+    background-color:   white;
 }
 
 .post_feed_image {
@@ -23,8 +24,8 @@
 
 }
 
-*{
-    background-color #fafafa;
+body {
+    background-color: #fafafa;
 }
 
 .profile_pic img {
