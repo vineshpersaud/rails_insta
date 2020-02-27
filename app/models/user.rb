@@ -21,4 +21,5 @@ class User < ApplicationRecord
             return "cat-profile-64.png"
         end
     end
+    
 end

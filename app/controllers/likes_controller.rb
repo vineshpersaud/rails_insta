@@ -2,9 +2,11 @@ class LikesController < ApplicationController
 
     def create
         post = Post.find( params['post_id'])
-        post.likes.create(user_id: current_user.id)
-        binding.pry
-        redirect_to posts_post_feed_path
+        liked = current_user.likes.where(post_id: post.id).exists?
+        if !liked
+          post.likes.create(user_id: current_user.id)
+          redirect_to posts_post_feed_path
+        end
     end
 
     private
