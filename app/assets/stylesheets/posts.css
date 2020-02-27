@@ -1,13 +1,13 @@
 #user_images{
     display: flex;    
     flex-wrap: wrap ;
-    margin-top: 145px;
-    margin-left: 20%;
+    justify-content: center;
+    margin-top: 100px;
 }
 
 .post_image  {
-    width: 315px;
-    height: 315px;
+    width: 275px;
+    height: 275px;
     margin: 9px;
     overflow: hidden;
 }
