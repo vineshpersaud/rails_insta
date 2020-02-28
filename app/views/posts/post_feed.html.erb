@@ -20,18 +20,20 @@
 
 
 
-            <%= post.title %><br>
 
             <% post.comments.each do |comment|%>
-                <%=comment.user.username%>:
-                <%=comment.text%>
+                <span class="comment_username">
+                    <%=comment.user.username%>
+                </span>
+                <%=comment.text%><br>
             <%end%><br>
-
+            <hr>
             <%= form_for @comment , url: comments_create_path do |f|%>
-                <%= f.label :text %>
-                <%= f.text_area :text %>
+                <%= f.text_area :text,placeholder: "Add a comment..." %>
                 <%= hidden_field_tag "comment[post_id]", "#{post.id}" %>
-                <%= f.submit %>
+                <span class= "post_button">
+                    <%= f.submit "Post" %>
+                <span>
             <%end%>
         </div>
     <%end%>

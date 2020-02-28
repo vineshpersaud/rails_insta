@@ -19,7 +19,7 @@
 .post_feed_image {
     width: 100%;
     height: auto;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 2px;
 
 }
@@ -37,8 +37,8 @@ body {
     
 }
 .profile_pic {
-    width: 54px;
-    height: 54px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: inline-block;
     float: left;
@@ -66,6 +66,46 @@ body {
     float: left;
 }
 
+.comment_username{
+    font-weight: 550;
+    color: #262625;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
 .heart{
     width:28px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+#comment_text{
+    width: 500px;
+    height: 40px;
+    font-size: large;
+    border: none;
+    resize: none;
+    outline: 0;
+    padding-left: 10px;
+}
+
+.post_button input[type="submit" i] {
+    background: transparent;
+    font-size: 14px;
+    position:relative;
+    float: right;
+    padding-top: 9px;
+    padding-right: 20px;
+    border: none;
+    color: #3797F0;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
