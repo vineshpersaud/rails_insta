@@ -11,11 +11,16 @@
 }
 
 #navbar img{
-    width: 32px;
+    width: 28px;
     height: auto;
 }
 
 #navbar{
     border-bottom: .5px solid;
-    margin-bottom: 30px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    overflow: hidden;
+    background-color: white;
+    height: 55px;
 }
