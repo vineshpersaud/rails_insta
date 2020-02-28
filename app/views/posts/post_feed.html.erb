@@ -11,18 +11,21 @@
                 </div>
             </div>
             <div class="post_feed_image"><%= image_tag(post.image,  class: "post_feed_image")%></div>
-            <%= post.title %><br>
-
 
             <%if current_user.likes.where(post_id: post.id).exists?%>
                 <%= image_tag("liked_heart.png" , class: "heart")  %>
             <%else%>
                 <%= link_to image_tag("like_heart.png", class: "heart"), likes_create_path(post_id: post), method: :post %>
-            <%end%>
+            <%end%><br>
+
+
+
+            <%= post.title %><br>
 
             <% post.comments.each do |comment|%>
+                <%=comment.user.username%>:
                 <%=comment.text%>
-            <%end%>
+            <%end%><br>
 
             <%= form_for @comment , url: comments_create_path do |f|%>
                 <%= f.label :text %>
