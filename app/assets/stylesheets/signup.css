@@ -6,14 +6,14 @@
     width: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 195px;
+    margin-top: 95px;
 }
 
 #new_user{
     width: 25%;
     margin: 25px;
-    margin-top: 75px;
-    position: absolute;
+    padding-top: 55px;
+
 }
 
 .new_user input {
@@ -29,8 +29,52 @@
   border-radius: 4px;
   padding: 0.5em 1em;
   color: #ffffff;
-  background-color: #9555af;
+  background-color: #3797F0;
   height: 40px;
   font-size: 20px;
   font-weight: lighter;
 }
+
+
+#login {
+    width: 550px;
+    border: 1px;
+    outline: 1px solid black;
+    height: 420px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 95px;
+  }
+
+#login_button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 0;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    color: #ffffff;
+    background-color: #3797F0;
+    height: 40px;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+
+  #sign_up_button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 0;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    color: #ffffff;
+    background-color: #3797F0;
+    height: 42px;
+    width:252px;
+    font-size: 22px;
+    margin-left: 24px;
+    font-weight: lighter;
+  }
